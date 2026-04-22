@@ -1,11 +1,18 @@
-<html> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title> Pahokee Robotics</title>
+    <title>Medical Archives</title>
     <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
-
+    
     <style>
+       video {
+    width: 100%;       /* Fills the container width */
+    max-width: 600px;  /* Make pretty on computer*/
+    height: auto;      /* Keeps the original shape */
+}     /* Keeps the video from looking dead */
+
         body { background-color: #f7f7f7; color: #000000; font-family: 'Calligraffitti', sans-serif; text-align: center; }
         .pencil-logo { color: #970000; font-weight: bold; font-size: 40px; margin-top: 50px; font-family: 'Calligraffitti', cursive; }
         .search-container { margin: 20px auto; max-width: 500px; }
@@ -15,12 +22,503 @@
         .archive-item { display: none; margin-top: 40px; }
         video { border: 2px solid #494949; border-radius: 10px; }
         
+        #certificate-display { 
+    display: none; 
+    margin: 20px auto; 
+    padding: 20px; 
+    border: 10px double #970000; 
+    width: 90%;          /* Flexible width */
+    max-width: 700px;    /* Maximum size for computers */
+    background-color: #fffaf0; 
+}
+
+.quiz-box {
+    display: none; 
+    background: white; 
+    padding: 20px; 
+    border: 2px solid #CC8C97; 
+    border-radius: 15px; 
+    width: 90%;          /* Flexible width */
+    max-width: 800px;    /* Maximum size for computers */
+    margin: 20px auto; 
+}
+
+
+@media (max-width: 600px) {
+    /* 1. Make the logo a bit smaller so it fits */
+    .pencil-logo { font-size: 28px; }
+
+    /* 2. Stack the search bar and button vertically */
+    .search-container input { width: 90%; margin-bottom: 10px; }
+    .search-container button { width: 90%; }
+
+    /* 3. Make buttons easier to tap with a thumb */
+    button { padding: 15px; font-size: 16px; width: 95%; }
+
+    /* 4. Reduce margins so you have more room for text */
+    .quiz-box { padding: 15px; width: 95%; }
+}
+
     </style>
-    
 </head>
 
+<body>
+
+    <div style="display: flex; flex-direction: column; align-items: flex-end; width: 95%; margin: 10px auto;">
+        <button type="button" onclick="showSources()">Sources</button>
+        <button type="button" onclick="toggleCredits()">Music Credits</button>
+
+        <div id="music-credit-box" style="display:none; background-color: white; border: 2px solid #CC8C97; padding: 15px; border-radius: 10px; margin-top: 10px; font-family: 'Calligraffitti', cursive; font-size: 13px; color: #333; max-width: 400px; text-align: right; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+            <h3 style="color: #970000; margin-top: 0;">CPR Credits</h3>
+            <p><strong>Music:</strong> Rainy Afternoon by <a href="https://www.youtube.com/@snoozybeats" target="_blank">Snoozy Beats</a></p>
+            <p><strong>License:</strong> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a></p>
+            <p><strong>Source:</strong> <a href="https://www.audiolibrary.com.co/" target="_blank">Audio Library</a></p>
+            <h3 style="color: #970000; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px;">Heart Attack Credits</h3>
+            <p><strong>Music:</strong> Feelings by <a href="https://www.youtube.com/@qlowdymusic" target="_blank">Qlowdy</a></p>
+            <p><strong>License:</strong> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a></p>
+            <p><strong>Source:</strong> <a href="https://www.audiolibrary.com.co/" target="_blank">Audio Library</a></p>
+            <h3 style="color: #970000; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px;">Heimlich Maneuver Credits</h3>
+            <p><strong>Music:</strong> Heimlich Maneuver by <a href="https://www.youtube.com/@snoozybeats" target="_blank">Snoozy Beats</a></p>
+            <p><strong>License:</strong> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a></p>
+            <p><strong>Source:</strong> <a href="https://www.audiolibrary.com.co/" target="_blank">Audio Library</a></p>
+            <h3 style="color: #970000; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px;">Stroke Credits</h3>
+            <p><strong>Music:</strong> Stroke by <a href="https://www.youtube.com/@snoozybeats" target="_blank">Snoozy Beats</a></p>
+            <p><strong>License:</strong> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a></p>
+            <p><strong>Source:</strong> <a href="https://www.audiolibrary.com.co/" target="_blank">Audio Library</a></p>
+            <h3 style="color: #970000; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px;">Seizure Credits</h3>
+            <p><strong>Music:</strong> Seizure by <a href="https://www.youtube.com/@snoozybeats" target="_blank">Snoozy Beats</a></p>
+            <p><strong>License:</strong> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a></p>
+            <p><strong>Source:</strong> <a href="https://www.audiolibrary.com.co/" target="_blank">Audio Library</a></p>
+
+            <button type="button" onclick="toggleCredits()" style="background-color: #494949; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Close</button>
+        </div>
+    </div>
+
+    <div class="pencil-logo">☤ Medical archives</div>
+    <hr style="width: 80%; border: 0.5px solid #aa4545; margin: 20px auto;">
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search (e.g. CPR, Heart)...">
+        <button type="button" onclick="performSearch()">Search</button>
+    </div>
+
+    <p>Medicine and Engineering</p>  
+    <p> By: Manha Sadika</p>
+    
+    <h3 style="text-align:left; font-family:Monospace; margin-left: 10%;"> Description of this Website:</h3>
+    <p style="text-align:left; font-family:Monospace; margin-left: 10%;"> This website will allow students and users to learn about certain medical procedures and conditions.</p>
+    <p style="text-align:left; font-family:Monospace; margin-left: 10%;"> Navigate through the animations to learn about different medical procedures and conditions.</p>
+    <p style="text-align:left; font-family:Monospace; margin-left: 10%;"> Music used in videos can be found creddited on Music Credits.</p>
+
+    <br>
+    <p>Type in a animation from the index down below and scoll down.</p>
+    <footer> Note!!! Be sure to call 911 in a real emergency, this is merely to provide educational information.</footer>
+    <hr style="width: 80%; border: 0.5px solid #ddd; margin: 40px auto;">
+    <h3 style="text-align:left; font-family:Calligraffitti, cursive; margin-left: 10%;"> Index of Animations:</h3>
+    <ul> 
+        <li> CPR Animation</li>
+        <li> Heart Attack Animation</li>
+        <li> Heimlich Maneuver Animation</li>
+        <li> Stroke Animation</li>
+        <li> Seizure Animation</li>
+        
+    </ul>
 
 
+    <div id="sources" style="display:none; max-width:800px; margin:20px auto; text-align:left; background:#ffffff; padding:16px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08);">
+        <h3 style="margin-top:0; color:#970000;">Sources</h3>
+        <ul>
+            <li><a href="https://www.mayoclinic.org/first-aid/first-aid-cpr/basics/art-20056600" target="_blank">Mayo Clinic — CPR Guidelines</a></li>
+            <li><a href="https://www.mayoclinic.org/diseases-conditions/stroke/symptoms-causes/syc-20350113" target="_blank">Mayo Clinic — Stroke Information</a></li>
+            <li><a href="https://www.mayoclinic.org/diseases-conditions/seizure/symptoms-causes/syc-20365711" target="_blank">Mayo Clinic — Seizure Information</a></li>
+            <li><a href="https://www.mayoclinic.org/first-aid/first-aid-choking/basics/art-20056637" target="_blank">Mayo Clinic — Choking First Aid</a></li>
+            <li><a href="https://www.verywellhealth.com/heimlich-maneuver-5210124" target="_blank">Verywell Health — Heimlich Maneuver</a></li>
+            <li><a href="https://www.mayoclinic.org/diseases-conditions/stroke/symptoms-causes/syc-20350113" target="_blank">Mayo Clinic — Stroke Information</a></li>
+        </ul>
+    </div>
 
+    <div id="animation-gallery">
+        <div class="archive-item" data-tags="cpr emergency first aid">
+            <h2>Medical Archive: CPR Animation</h2>
+            <video width="600" controls loop muted><source src="static/CPRanimation2.mp4" type="video/mp4"></video>
+            <p>Procedure of CPR.</p>
+            <button type="button" onclick="openQuiz('cpr-quiz-box')" style="background-color: #494949;">Take the CPR Quiz</button>
+        </div>
 
+        <div class="archive-item" data-tags="heart attack cardiac chest pain">
+            <h2>Medical Archive: Heart Attack Animation</h2>
+            <video width="600" controls loop muted><source src="static/Heart+Attack.mp4" type="video/mp4"></video>
+            <p>Heart Attack - Symptoms and Awareness</p>
+            <button type="button" onclick="openQuiz('heart-quiz-box')" style="background-color: #494949;">Take the Heart Attack Quiz</button>
+        </div>
+
+        <div class="archive-item" data-tags="Stroke stroke symptoms FAST">
+            <h2>Medical Archive: Stroke Animation</h2>
+            <video width="600" controls loop muted><source src="static/Stroke+Animation.mp4" type="video/mp4"></video>
+            <p>Stroke - Symptoms and Awareness</p>
+            <button type="button" onclick="openQuiz('stroke-quiz-box')" style="background-color: #494949;">Take the Stroke Quiz</button>
+        </div>
+
+        <div class="archive-item" data-tags="Seizure seizure symptoms">
+            <h2>Medical Archive: Seizure Animation</h2>
+            <video width="600" controls loop muted><source src="static/Seizure+Animation.mp4" type="video/mp4"></video>
+            <p>Seizure - Symptoms and Awareness</p>
+            <button type="button" onclick="openQuiz('seizure-quiz-box')" style="background-color: #494949;">Take the Seizure Quiz</button>
+        </div>
+
+         <div class="archive-item" data-tags="Hiemlich heimlich choking">
+             <h2>Medical Archive: Heimlich Maneuver Animation</h2>
+            <h2>Medical Archive: Hiemlich Manuever Animation</h2>
+            <video width="600" controls loop muted><source src="static/Hiemlech+Manuever.mp4" type="video/mp4"></video>
+            <p>Seizure - Symptoms and Awareness</p>
+            <button type="button" onclick="openQuiz('seizure-quiz-box')" style="background-color: #494949;">Take the Seizure Quiz</button>
+        </div>
+    </div>
+
+    <div id="cpr-quiz-box" class="quiz-box">
+        <h2 style="text-align:center; color: #970000;">CPR Assessment</h2>
+        <input type="text" id="name-cpr" style="width: 95%; margin-bottom: 20px;" placeholder="Full Name for Certificate"><br>
+        
+        <p><strong>1. What is the recommended rate for chest compressions per minute?</strong></p>
+        <input type="radio" name="cpr_q1" value="0"> 60-80<br>
+        <input type="radio" name="cpr_q1" value="1"> 100-120<br>
+        <input type="radio" name="cpr_q1" value="0"> 150-200<br>
+
+        <p><strong>2. Why is early CPR critical in a cardiac emergency?</strong></p>
+        <input type="radio" name="cpr_q2" value="1"> It maintains blood flow to vital organs<br>
+        <input type="radio" name="cpr_q2" value="0"> it's a legal requirement<br>
+        <input type="radio" name="cpr_q2" value="0"> It restarts the heart instantly every time<br>
+
+        <p><strong>3. Why should you perform CPR immediately after a cardiac arrest?</strong></p>
+        <input type="radio" name="cpr_q3" value="1"> Makes sure the blood begins to flow as soon as possible<br>
+        <input type="radio" name="cpr_q3" value="0"> Makes sure they keep their memories<br>
+        <input type="radio" name="cpr_q3" value="0"> Reduces probability of a heart attack<br>
+
+        <p><strong>4. What is the probability of reducing mortality after doing CPR?</strong></p>
+        <input type="radio" name="cpr_q4" value="0"> 50% <br>
+        <input type="radio" name="cpr_q4" value="0"> 75% <br>
+        <input type="radio" name="cpr_q4" value="1"> 80% <br>
+
+        <p><strong>5. What is the first step in CPR?</strong></p>
+        <input type="radio" name="cpr_q5" value="0"> Begin chest compressions <br>
+        <input type="radio" name="cpr_q5" value="0"> Begin to wake up patient <br>
+        <input type="radio" name="cpr_q5" value="1"> Look around surroundings <br>
+
+        <p><strong>6. Is mouth to mouth necessary?</strong></p>
+        <input type="radio" name="cpr_q6" value="0"> True <br>
+        <input type="radio" name="cpr_q6" value="1"> False <br>
+           
+        <p><strong>7. Is CPR the same for everyone?</strong></p>
+        <input type="radio" name="cpr_q7" value="0"> True <br>
+        <input type="radio" name="cpr_q7" value="1"> False <br>
+
+        <p><strong>8. To use a AED Difibliterator you need to be a medical professional</strong></p>
+        <input type="radio" name="cpr_q8" value="0"> True <br>
+        <input type="radio" name="cpr_q8" value="1"> False <br>
+
+        <p><strong>9. What is the primary goal of CPR?</strong></p>
+        <input type="radio" name="cpr_q9" value="0"> To restart the heart instantly <br>
+        <input type="radio" name="cpr_q9" value="1"> To maintain blood flow to vital organs <br>
+        <input type="radio" name="cpr_q9" value="0"> To wake up the patient <br>
+
+        <p><strong>10. How long should you continue CPR?</strong></p>
+        <input type="radio" name="cpr_q10" value="0"> Until the person starts to breathe <br>
+        <input type="radio" name="cpr_q10" value="1"> Until medical help arrives <br>
+        <input type="radio" name="cpr_q10" value="0"> For at least 30 minutes <br>
+
+        <button type="button" onclick="submitCpr()" style="width:100%; background-color: #970000; color: white; margin-top: 20px; padding: 10px; border-radius: 5px; font-weight: bold; cursor: pointer;">Submit CPR Assessment</button>
+    </div>
+
+    <div id="heart-quiz-box" class="quiz-box">
+        <h2 style="text-align:center; color: #970000;">Heart Attack Assessment</h2>
+        <input type="text" id="name-heart" style="width: 95%; margin-bottom: 20px;" placeholder="Full Name for Certificate"><br>
+
+        <p><strong>1. First step in a suspected heart attack?</strong></p>
+        <input type="radio" name="h_q1" value="1"> Call 911 <br>
+        <input type="radio" name="h_q1" value="0"> Wait for it to pass <br>
+
+        <p>2. True or False: Heart attack symptoms can feel like indigestion.</p>
+    <input type="radio" name="h2" value="1"> True <br>
+    <input type="radio" name="h2" value="0"> False <br>
+
+    <p>3. Where might pain spread during a heart attack?</p>
+    <input type="radio" name="h3" value="1"> Left arm, neck, or jaw <br>
+    <input type="radio" name="h3" value="0"> To the knees and feet <br>
+
+    <p>4. What is the first thing you should do if someone collapses?</p>
+    <input type="radio" name="h4" value="1"> Call 911 immediately <br>
+    <input type="radio" name="h4" value="0"> Wait for them to wake up <br>
+
+    <p>5. Why is Aspirin often recommended?</p>
+    <input type="radio" name="h5" value="1"> It helps thin the blood <br>
+    <input type="radio" name="h5" value="0"> It stops the person from coughing <br>
+
+    <p>6. Do women always experience the same symptoms as men?</p>
+    <input type="radio" name="h6" value="1"> No, they often feel nausea or back pain <br>
+    <input type="radio" name="h6" value="0"> Yes, the symptoms are always identical <br>
+
+    <p>7. What is the purpose of an AED?</p>
+    <input type="radio" name="h7" value="1"> To restart the heart with a shock <br>
+    <input type="radio" name="h7" value="0"> To check the person's temperature <br>
+
+    <p>8. What should you do if the person stops breathing?</p>
+    <input type="radio" name="h8" value="1"> Begin CPR immediately <br>
+    <input type="radio" name="h8" value="0"> Give them water <br>
+
+    <p>9. Should you drive yourself to the hospital during a heart attack?</p>
+    <input type="radio" name="h9" value="1"> No, call an ambulance <br>
+    <input type="radio" name="h9" value="0"> Yes, it is faster <br>
+
+        <button type="button" onclick="submitHeart()" style="width:100%; background-color: #970000; color: white; margin-top: 20px; padding: 10px; border-radius: 5px; font-weight: bold; cursor: pointer;">Submit Heart Attack Assessment</button>
+    </div>
+
+     <div id="heimelch-quiz-box" class="quiz-box">
+        <h2 style="text-align:center; color: #970000;">Heimlich Maneuver Assessment</h2>
+        <input type="text" id="name-heimelch" style="width: 95%; margin-bottom: 20px;" placeholder="Full Name for Certificate"><br>
+
+        <p><strong>1. First step in a suspected heimlich maneuver?</strong></p>
+        <input type="radio" name="heimlich_q1" value="1"> Bring Water <br>
+        <input type="radio" name="heimlich_q1" value="0"> Pray <br>
+
+        <button type="button" onclick="submitHeimlich()" style="width:100%; background-color: #970000; color: white; margin-top: 20px; padding: 10px; border-radius: 5px; font-weight: bold; cursor: pointer;">Submit Heimlich Maneuver Assessment</button>
+    </div>
+
+    <div id="seizure-quiz-box" class="quiz-box">
+        <h2 style="text-align:center; color: #970000;">Seizure Assessment</h2>
+        <input type="text" id="name-seizure" style="width: 95%; margin-bottom: 20px;" placeholder="Full Name for Certificate"><br>
+
+        <p><strong>1. First symptom of a seizure?</strong></p>
+        <input type="radio" name="seizure_q1" value="1">Check if the person is muted <br>
+        <input type="radio" name="seizure_q1" value="0"> Pray <br>
+
+        <p>2. What is the primary goal of seizure first aid?</p>
+        <input type="radio" name="s1" value="1"> Keeping the person safe from injury <br>
+        <input type="radio" name="s1" value="0"> Stopping the shaking manually <br>
+
+    <p>3. Should you restrain someone having a seizure?</p>
+    <input type="radio" name="s2" value="1"> No, it can cause injury <br>
+    <input type="radio" name="s2" value="0"> Yes, to keep them still <br>
+
+    <p>4. What is the "Recovery Position"?</p>
+    <input type="radio" name="s3" value="1"> Rolling them onto their side <br>
+    <input type="radio" name="s3" value="0"> Holding them upright <br>
+
+    <p>5. Why should you cushion the head?</p>
+    <input type="radio" name="s4" value="1"> To prevent trauma from the ground <br>
+    <input type="radio" name="s4" value="0"> To help them fall asleep <br>
+
+    <p>6. After how many minutes of seizing MUST you call 911?</p>
+    <input type="radio" name="s5" value="1"> 5 minutes <br>
+    <input type="radio" name="s5" value="0"> 20 minutes <br>
+
+    <p>7. What should you put in their mouth?</p>
+    <input type="radio" name="s6" value="1"> Nothing (it is dangerous) <br>
+    <input type="radio" name="s6" value="0"> A spoon or wallet <br>
+
+    <p>8. Are people usually conscious during a grand mal seizure?</p>
+    <input type="radio" name="s7" value="1"> No <br>
+    <input type="radio" name="s7" value="0"> Yes <br>
+
+    <p>9. What should you do once the shaking stops?</p>
+    <input type="radio" name="s8" value="1"> Check breathing and stay with them <br>
+    <input type="radio" name="s8" value="0"> Leave them to rest alone <br>
+
+    <p>10. Is confusion normal after a seizure?</p>
+    <input type="radio" name="s9" value="1"> Yes, it is the post-ictal state <br>
+    <input type="radio" name="s9" value="0"> No, it means they are dreaming <br>
+</div>
+
+        <button type="button" onclick="submitSeizure()" style="width:100%; background-color: #970000; color: white; margin-top: 20px; padding: 10px; border-radius: 5px; font-weight: bold; cursor: pointer;">Submit Seizure Assessment</button>
+    </div>
+
+    <div id="stroke-quiz-box" class="quiz-box">
+        <h2 style="text-align:center; color: #970000;">Stroke Assessment</h2>
+        <input type="text" id="name-stroke" style="width: 95%; margin-bottom: 20px;" placeholder="Full Name for Certificate"><br>
+
+        <p><strong>1.Acronym to check if it is a stroke?</strong></p>
+        <input type="radio" name="stroke_q1" value="1"> F.A.S.T <br>
+        <input type="radio" name="stroke_q1" value="0"> S.T.R.O.K.E <br>
+
+        <p><strong>2</strong>2. In F.A.S.T., what does the 'F' stand for?</strong></p>
+    <input type="radio" name="st1" value="1"> Face Drooping <br>
+    <input type="radio" name="st1" value="0"> Fast Heartbeat <br>
+
+    <p><strong>3. What does the 'A' stand for?</strong></p>
+    <input type="radio" name="st2" value="1"> Arm Weakness <br>
+    <input type="radio" name="st2" value="0"> Airway Blockage <br>
+
+    <p><strong>4. What does the 'S' stand for?</strong></p>
+    <input type="radio" name="st3" value="1"> Speech Difficulty <br>
+    <input type="radio" name="st3" value="0"> Sudden Shaking <br>
+
+    <p><strong>5. What does the 'T' stand for?</strong></p>
+    <input type="radio" name="st4" value="1"> Time to call 911 <br>
+    <input type="radio" name="st4" value="0"> Temperature check <br>
+
+    <p><strong>6. Why is a stroke called a "Brain Attack"?</strong></p>
+    <input type="radio" name="st5" value="1"> Blood flow to the brain is cut off <br>
+    <input type="radio" name="st5" value="0"> The brain is over-oxygenated <br>
+
+    <p><strong>7. If symptoms go away quickly, do you still need a doctor?</strong></p>
+    <input type="radio" name="st6" value="1"> Yes, it could be a warning stroke (TIA) <br>
+    <input type="radio" name="st6" value="0"> No, it was just a glitch <br>
+
+    <p><strong>8. Can a stroke cause sudden vision loss?</strong></p>
+    <input type="radio" name="st7" value="1"> Yes <br>
+    <input type="radio" name="st7" value="0"> No <br>
+
+    <p><strong>9. Should you give a stroke victim food or water?</strong></p>
+    <input type="radio" name="st8" value="1"> No, they may have trouble swallowing <br>
+    <input type="radio" name="st8" value="0"> Yes, to keep them hydrated <br>
+
+    <p><strong>10. Which law protects you when you try to help?</strong></p>
+    <input type="radio" name="st9" value="1"> Good Samaritan Law <br>
+    <input type="radio" name="st9" value="0"> The Medical Privacy Act <br>
+
+        <p><strong>2. What should you ask a person to do to check for "Arm weakness"?</strong></p>
+<input type="radio" name="stroke_q2" value="1"> Raise both arms <br>
+<input type="radio" name="stroke_q2" value="0"> Squeeze your hand <br>
+
+<p><strong>3. Which is a common sign of speech difficulty during a stroke?</strong></p>
+<input type="radio" name="stroke_q3" value="1"> Slurred or strange-sounding speech <br>
+<input type="radio" name="stroke_q3" value="0"> Sudden whispering <br>
+
+<p><strong>4. Why is "Time" so critical in the F.A.S.T. method?</strong></p>
+<input type="radio" name="stroke_q4" value="1"> Brain cells die quickly without blood flow <br>
+<input type="radio" name="stroke_q4" value="0"> To ensure the person doesn't fall asleep <br>
+
+<p><strong>5. If you notice even one sign of a stroke, what should you do?</strong></p>
+<input type="radio" name="stroke_q5" value="1"> Call 911 immediately <br>
+<input type="radio" name="stroke_q5" value="0"> Wait 30 minutes to see if it passes <br>
+
+<p><strong>6. How does the Good Samaritan Law help bystanders?</strong></p>
+<input type="radio" name="stroke_q6" value="1"> It protects them from being sued for trying to help <br>
+<input type="radio" name="stroke_q6" value="0"> It gives them a financial reward <br>
+
+<p><strong>7. Which of these is a "Silent" symptom often missed?</strong></p>
+<input type="radio" name="stroke_q7" value="1"> Sudden severe headache with no known cause <br>
+<input type="radio" name="stroke_q7" value="0"> A minor cough <br>
+
+<p><strong>8. How should you position a conscious stroke victim while waiting for help?</strong></p>
+<input type="radio" name="stroke_q8" value="1"> Lying on their side with head slightly raised <br>
+<input type="radio" name="stroke_q8" value="0"> Standing up to keep blood moving <br>
+
+<p><strong>9. Why should you NOT give a stroke victim food or water?</strong></p>
+<input type="radio" name="stroke_q9" value="1"> They could choke due to paralyzed throat muscles <br>
+<input type="radio" name="stroke_q9" value="0"> It will make the hospital tests fail <br>
+
+<p><strong>10. What is the "Golden Hour" in stroke treatment?</strong></p>
+<input type="radio" name="stroke_q10" value="1"> The first hour where treatment is most effective <br>
+<input type="radio" name="stroke_q10" value="0"> The hour spent waiting for an ambulance <br>
+
+        <button type="button" onclick="submitStroke()" style="width:100%; background-color: #970000; color: white; margin-top: 20px; padding: 10px; border-radius: 5px; font-weight: bold; cursor: pointer;">Submit Stroke Assessment</button>
+    </div>
+
+    <div id="certificate-display">
+        <h1 style="color: #970000;">Certificate of Assessment</h1>
+        <p>This is to certify that</p>
+        <h2 id="display-name" style="text-decoration: underline;"></h2>
+        <p>successfully passed the assessment for</p>
+        <h3 id="cert-subject">Medical Archives</h3>
+        <p>Final Score: <span id="final-score"></span>%</p>
+        <br>
+        <p><strong>Manha Sadika</strong><br>Developer of Medical Archives</p>
+        <button onclick="window.print()" style="background-color: #494949; color: white;">Download</button>
+    </div>
+
+    <script>
+        // so when they press enter it works
+        document.getElementById("search-input").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") performSearch();
+        });
+
+        function performSearch() {
+            let input = document.getElementById('search-input').value.toLowerCase();
+            let items = document.getElementsByClassName('archive-item');
+            for (let i = 0; i < items.length; i++) {
+                let tags = items[i].getAttribute('data-tags');
+                items[i].style.display = (tags.includes(input) && input !== "") ? "block" : "none";
+            }
+        }
+
+        function openQuiz(id) {
+            document.getElementById(id).style.display = "block";
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function submitCpr() {
+            let name = document.getElementById('name-cpr').value;
+            if (!name) { alert("Please enter your name!"); return; }
+
+            let score = 0;
+            for (let i = 1; i <= 10; i++) {
+                let q = document.querySelector('input[name="cpr_q' + i + '"]:checked');
+                if (q && q.value === "1") { score++; }
+            }
+
+            let pct = Math.round((score / 10) * 100);
+            if (pct >= 70) { showCert(name, "CPR Training", pct); }
+            else { alert("Score: " + pct + "%. You need 70% to pass."); }
+        }
+
+        function submitHeart() {
+            let name = document.getElementById('name-heart').value;
+            let q1 = document.querySelector('input[name="h_q1"]:checked');
+            if (!name) { alert("Please enter your name!"); return; }
+
+            if (q1 && q1.value === "1") { showCert(name, "Heart Attack Response", 100); }
+            else { alert("Incorrect. Please try again."); }
+        }
+
+        function submitHeimlich() {
+            let name = document.getElementById('name-heimlich').value;
+            let q1 = document.querySelector('input[name="heimlich_q1"]:checked');
+            if (!name) { alert("Please enter your name!"); return; }
+
+            if (q1 && q1.value === "1") { showCert(name, "Heimlich Maneuver", 100); }
+            else { alert("Incorrect. Please try again."); }
+        }
+
+        function submitSeizure() {
+            let name = document.getElementById('name-seizure').value;
+            let q1 = document.querySelector('input[name="seizure_q1"]:checked');
+            if (!name) { alert("Please enter your name!"); return; }
+
+            if (q1 && q1.value === "1") { showCert(name, "Seizure Response", 100); }
+            else { alert("Incorrect. Please try again."); }
+        }
+
+        function submitStroke() {
+            let name = document.getElementById('name-stroke').value;
+            let q1 = document.querySelector('input[name="stroke_q1"]:checked');
+            if (!name) { alert("Please enter your name!"); return; }
+
+            if (q1 && q1.value === "1") { showCert(name, "Stroke Response", 100); }
+            else { alert("Incorrect. Please try again."); }
+        }
+
+        function showCert(name, subject, score) {
+            document.getElementById('animation-gallery').style.display = "none";
+            document.getElementById('cpr-quiz-box').style.display = "none";
+            document.getElementById('heart-quiz-box').style.display = "none";
+            document.getElementById('heimlich-quiz-box').style.display = "none";
+            document.getElementById('seizure-quiz-box').style.display = "none";
+            document.getElementById('stroke-quiz-box').style.display = "none";
+            document.getElementById('certificate-display').style.display = "block";
+            document.getElementById('display-name').innerText = name;
+            document.getElementById('cert-subject').innerText = subject;
+            document.getElementById('final-score').innerText = score;
+        }
+
+        function showSources() {
+            let s = document.getElementById('sources');
+            s.style.display = (s.style.display === 'none') ? 'block' : 'none';
+        }
+
+        function toggleCredits() {
+            let x = document.getElementById("music-credit-box");
+            x.style.display = (x.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
 </html>
