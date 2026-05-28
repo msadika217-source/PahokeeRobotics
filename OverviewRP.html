@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">     
+    <link rel="stylesheet" href="https://use.typekit.net/qaw7nlm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+         
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="#" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="rp-overview-container">
+            
+            <div class="rp-back-btn-container">
+                <a href="{{ url_for('high_school') }}" class="rp-retro-back-btn">
+                    ◁ BACK TO HIGH SCHOOL DIVISIONS
+                </a>
+            </div>
+
+            <section class="rp-pixel-window rp-hero-window">
+                <div class="rp-window-title">The Rising Phoenixes #23812</div>
+                <p class="rp-hero-subtitle">» Season Mission Log & Data Matrix</p>
+                <p class="rp-dense-text rp-hero-summary">
+                    FTC team 23812 Rising Phoenix is a dedicated robotics team located in Florida that designs, builds, and programs innovative robots while fostering creativity, teamwork, and problem-solving. We strive to grow our skills, support each other, and rise to every challenge.
+                </p>
+            </section>
+
+            <div class="rp-pixel-grid-2">
+                
+                <div class="rp-pixel-window">
+                    <div class="rp-window-title">Team Intel Profile</div>
+                    <p class="rp-dense-text">
+                        Our team, The Rising Phoenixes, is based at Pahokee Middle–Senior High School and consists of high school juniors passionate about robotics and innovation. Established in 2022, our team focuses on teamwork, creativity, and resilience while developing engineering and problem-solving skills. We strive to challenge ourselves, uplift others, and inspire the next generation of STEM leaders through robotics.
+                    </p>
+                    <p class="rp-dense-text">
+                        Engineering requires iteration. Many designs did not work the first time, but testing, analyzing results, and redesigning helped us improve our robot and critical problem-solving skills under pressure.
+                    </p>
+                    
+                    <div class="inventory-item">
+                        <span class="item-label text-gold">CORE ATTRIBUTES & MOTTO:</span>
+                        <p class="rp-dense-text small-text">
+                            "Rise from the ashes to glory" — We focus on continuous improvement by learning new technical skills each season, and believe robotics is a platform for developing leadership, collaboration, and real-world engineering experience.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rp-pixel-window sidebar-layout">
+                    <div>
+                        <div class="rp-window-title">Status Matrix</div>
+                        <div class="rp-stat-box stat-red">
+                            <div class="rp-stat-label">Party Size</div>
+                            <div class="rp-stat-value">14 Active</div>
+                        </div>
+                        <div class="rp-stat-box stat-teal">
+                            <div class="rp-stat-label">Unit Grade</div>
+                            <div class="rp-stat-value small-val">11th Grade Core</div>
+                        </div>
+                    </div>
+
+                    <div class="rp-inventory-item mentor-item">
+                        <span class="rp-item-label text-gold">Guild Masters:</span>
+                        <span class="rp-mentor-line">• Mr. Cortes (Coach)</span>
+                        <span class="rp-mentor-line">• Mr. Paniagua (Mentor)</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="rp-pixel-window">
+                <div class="rp-window-title">Command Support Protocol</div>
+                <p class="rp-dense-text quote-text">
+                    "Our mentors guide us through engineering challenges, provide advice during robot design and programming, and help motivate the team. They also help us access materials and resources needed to succeed in competitions and STEM projects."
+                </p>
+            </div>
+
+            <div class="rp-pixel-window">
+                <div class="rp-window-title">Mech Specifications: "Silas"</div>
+                <p class="rp-dense-text">
+                    Our robot uses a modular design with a mecanum drivetrain that allows omnidirectional movement. Utilizing CAD to design the chassis and mechanisms completely beforehand, Silas has been engineered to perfectly complete this season's challenges.
+                </p>
+                
+                <div class="rp-inventory-item tech-item">
+                    <span class="rp-item-label text-teal">ENGINEERING MODIFICATIONS & FEATURES:</span>
+                    <p class="rp-dense-text small-text">
+                        • Turret-mounted dual flywheel shooter for faster aiming speed.<br>
+                        • Dual intake system for highly efficient artifact collection loops.<br>
+                        • Adjustable hood tracking for controlling shot trajectory adjustments.
+                    </p>
+                </div>
+
+                <div class="rp-inventory-item ability-item">
+                    <span class="rp-item-label text-purple">⭐ SIGNATURE ABILITY: ADVANCED AUTONOMOUS CONTROLS</span>
+                    <p class="rp-dense-text small-text">
+                        Features innovative and effective robot control systems, including advanced tracking sensors and precise autonomous execution that secured regional recognition.
+                    </p>
+                </div>
+
+                <div class="rp-node-section">
+                    <span class="node-title">Unlocked Node Specialties:</span>
+                    <div class="pixel-badge-grid">
+                        <span class="rp-pixel-badge">Building</span>
+                        <span class="rp-pixel-badge">Programming</span>
+                        <span class="rp-pixel-badge">CAD</span>
+                        <span class="rp-pixel-badge">Driving</span>
+                        <span class="rp-pixel-badge">Strategy</span>
+                        <span class="rp-pixel-badge">Outreach</span>
+                        <span class="rp-pixel-badge">Fundraising</span>
+                        <span class="rp-pixel-badge">Notebook / Documentation</span>
+                        <span class="rp-pixel-badge">Media / Marketing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rp-pixel-window">
+                <div class="rp-window-title">Campaign Journey: DECODE</div>
+                <p class="rp-dense-text">
+                    In this FTC season DECODE, our team focused on improving a wide variety of skills. Early in the season, we experimented with different robot designs, starting with a simple intake and shooter system. Through competitions and testing, we redesigned several mechanisms, including our shooter and chassis, using CAD and engineering principles. Along the way, we learned how to work better together, solve complex problems, and show others what is possible with robotics.
+                </p>
+
+                <div class="rp-pixel-grid-2 sub-grid">
+                    <div class="rp-inventory-item border-teal">
+                        <span class="rp-item-label text-teal">CAMPAIGN DIRECTIVES:</span>
+                        <p class="rp-dense-text field-text">
+                            Strengthen team synergy; expand complex technical abilities; advance to higher levels of competition bracket logic; promote STEM education and host interactive robotics workshops.
+                        </p>
+                    </div>
+                    <div class="rp-inventory-item border-purple">
+                        <span class="rp-item-label text-purple">UNIQUE BUFFS:</span>
+                        <p class="rp-dense-text field-text">
+                            Extreme resilience during redesign loops, dual mentoring systems, and active bionic engineering design workflows (SignSync).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="rp-pixel-window">
+                <div class="rp-window-title">Achievements Unlocked</div>
+                
+                <div class="rp-award-box">
+                    <span class="rp-award-title">🏆 UNLOCKED: CONTROL AWARD WINNER (2026)</span>
+                    <p class="rp-dense-text field-text text-white">
+                        Celebrated for executing advanced automated sensor loops, custom tracking math, and reliable Java autonomous pathways.
+                    </p>
+                </div>
+
+                <div class="rp-award-box" style="border-color: #fff6f6;">
+                    <span class="rp-award-title" style="color: #ffffff;">🏆 UNLOCKED: MOTIVATE AWARD</span>
+                    <p class="rp-dense-text field-text text-white">
+                        Recognized for outstanding team spirit, unified outreach campaign structures, and spreading STEM energy.
+                    </p>
+                </div>
+
+                <div class="rp-award-box" style="border-color: #e040fb;">
+                    <span class="rp-award-title" style="color: #e040fb;">🚀 SAMSUNG SOLVE FOR TOMORROW: INNOVATION AWARD</span>
+                    <p class="rp-dense-text field-text text-white">
+                        Secured a $1,000 engineering grant for creating SignSync: a functional 3D-printed bionic hand designed to teach sign language movements.
+                    </p>
+                </div>
+
+                <span class="rp-log-header">System Competition Logs:</span>
+                <div class="rp-quest-log-box">
+                    <div class="rp-log-entry">[11/01/2025] • FUN League Meet #1 @ Boca Raton Gym ➔ Rank: 19th (Record: 1-4-0)</div>
+                    <div class="rp-log-entry">[12/06/2025] • FUN League Meet #2 @ Boca Raton Gym ➔ Rank: 12th (Record: 3-2-0)</div>
+                    <div class="rp-log-entry">[01/17/2026] • FUN League Meet #3 @ Pahokee High Gym ➔ Rank: 17th (Record: 2-3-0)</div>
+                    <div class="rp-log-entry final-entry">[01/31/2026] • FUN League Tournament Championship ➔ Rank: 19/26 (Record: 2-3-0)</div>
+                </div>
+            </div>
+
+            <div class="rp-pixel-window">
+                <div class="rp-window-title">Outreach Matrix & Community Impact</div>
+                
+                <div class="rp-milestone-box">
+                    <span class="rp-milestone-title">⚙️ DEPLOYED PROTOCOL: FEATURED EVENT PANEL</span>
+                    <p class="rp-dense-text small-text text-white">
+                        <strong>PBSO Torry Island BBQ Festival:</strong> Deployed interactive public demonstration fields. Handled real-time tracking tutorials and walked community families through designing custom personalized 3D-printed keychains.
+                    </p>
+                </div>
+
+                <div class="rp-timeline-scroll-container">
+                    <strong>Mission Timeline Sublogs:</strong><br>
+                    • Elementary Tech Labs: Conducted direct hardware workshops at Pahokee Elementary and Canal Point Elementary.<br>
+                    • Live Drive Testing: Allowed elementary students to run basic drive path controls and explore structural code logic.<br>
+                    • FLL Collaboration: Partnered directly with sister team Bender Bots #16724 to construct and mentor local FLL modules.<br>
+                    • Executive Briefings: Demonstrated tactical robotics mechanics directly to Palm Beach County School District Superintendent Michael J. Burke.
+                </div>
+
+                <p class="rp-dense-text net-impact">
+                    <strong>Net Impact Output:</strong> Demystified technical systems for youth groups, expanded structural community collaboration networks, and created accessible entry points into advanced manufacturing tracks.
+                </p>
+            </div>
+
+            <div class="rp-pixel-window center-text">
+                <div class="rp-window-title title-center">Establish Link Network</div>
+                <p class="rp-dense-text center-text buffer-bottom">
+                    Synchronize tracking with Rising Phoenix telemetry pipelines:
+                </p>
+                
+                <div class="arcade-btn-row">
+                    <a href="https://www.instagram.com/rising.phoenixes.23812/" target="_blank" class="arcade-social-btn btn-insta">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/PMHSRobotics/" target="_blank" class="arcade-social-btn" style="background: #3b5998; box-shadow: 3px 3px 0 #000, inset -3px -3px 0 #2d4373;">
+                        <i class="fa-brands fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.youtube.com/@RisingPhoenixes-23812" target="_blank" class="arcade-social-btn btn-youtube">
+                        <i class="fa-brands fa-youtube"></i> Youtube
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
