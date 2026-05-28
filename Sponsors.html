@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics - Sponsors</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+                
+    <main>
+        <div style="display: flex; justify-content: flex-end; padding-top: 25px; padding-right: 40px; max-width: 1000px; margin: 0 auto;">
+            <a class="proposal-btn" href="https://docs.google.com/document/d/1iRGQIleElJjjNagy2V029MFzAK6nB4wV/edit?usp=sharing&ouid=102297184710786437365&rtpof=true&sd=true" target="_blank" rel="noopener" style="text-decoration: none; color: #ffffff; display: inline-flex; align-items: center;">
+                <i class="fa-solid fa-file-pdf" style="color: #dbe0e1;margin-right: 8px;"></i> Click here to read the Pahokee Robotics Sponsorship Proposal
+            </a>
+        </div>
+
+        <br> <br>
+        
+        <section style="max-width: 1000px; margin: 0 auto; padding: 0 20px; font-family: Arial, sans-serif;">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: #005270; font-size: 45px; margin: 0 0 10px 0;">SPONSORSHIP LEVELS & PERKS</h2>
+                <p style="font-family: 'RainyHearts', Arial, sans-serif; font-size: 18px; color: #333333; line-height: 1.5; max-width: 800px; margin: 0 auto;">
+                    Choose the level that fits your donation. Every tier includes meaningful recognition and awareness across our five teams and community. Thank you again for supporting Pahokee Robotics! (Scroll down to see the list of our sponsors)
+                </p>
+            </div>
+
+            <div class="tier-container titanium-border">
+                <div class="tier-header">
+                    <h3 class="tier-title">TITANIUM CHAMPION</h3>
+                    <span class="tier-amount">$5,000+</span>
+                </div>
+                <p style="font-style: italic; font-weight: bold; color: #555; margin-top: 0; margin-bottom: 10px;">Top-tier presenting partner of Pahokee Robotics.</p>
+                <ul class="tier-list">
+                    <li>Premier logo placement on all five team robots, banners, pit displays, and team shirts (largest size)</li>
+                    <li>"Presented by [Your Company]" naming rights on the team trailer/transportation graphics</li>
+                    <li>Dedicated feature post and quarterly spotlight on all team social media accounts</li>
+                    <li>Logo and link on every printed and digital sponsorship document for the season</li>
+                    <li>VIP invitation for up to 6 guests to all home competitions, demo days, and end-of-season banquet</li>
+                    <li>Certificate of appreciation, framed team photo, and personalized thank-you video from the students</li>
+                    <li>Opportunity to host a robot demo or career-day visit at your facility</li>
+                    <li>Public recognition in press releases, school announcements, and community newspaper features</li>
+                </ul>
+            </div>
+
+            <div class="tier-container platinum-border">
+                <div class="tier-header">
+                    <h3 class="tier-title">PLATINUM SPONSOR</h3>
+                    <span class="tier-amount">$2,500+</span>
+                </div>
+                <p style="font-style: italic; font-weight: bold; color: #555; margin-top: 0; margin-bottom: 10px;">Major sponsor with full-season visibility.</p>
+                <ul class="tier-list">
+                    <li>Large logo on team shirts, competition banners, robots, and pit booth signage</li>
+                    <li>Named sponsor recognition during competition introductions and award ceremonies</li>
+                    <li>Featured sponsor highlight post on all four team Instagram accounts</li>
+                    <li>Logo on all printed sponsorship and outreach materials</li>
+                    <li>VIP invitation for up to 4 guests to home competitions and end-of-season banquet</li>
+                    <li>Framed certificate of appreciation and team thank-you card</li>
+                    <li>Tour and behind-the-scenes visit to the robotics lab</li>
+                </ul>
+            </div>
+
+            <div class="tier-container gold-border">
+                <div class="tier-header">
+                    <h3 class="tier-title">GOLD SPONSOR</h3>
+                    <span class="tier-amount">$1,000+</span>
+                </div>
+                <p style="font-style: italic; font-weight: bold; color: #555; margin-top: 0; margin-bottom: 10px;">Strong supporter with year-round recognition.</p>
+                <ul class="tier-list">
+                    <li>Medium logo on team banners, robots, and pit booth signage</li>
+                    <li>Logo on team shirts (medium size)</li>
+                    <li>Sponsor recognition post on team social media accounts</li>
+                    <li>Logo listed on team sponsorship handouts and event programs</li>
+                    <li>Invitation for up to 2 guests to home competitions</li>
+                    <li>Certificate of appreciation and team photo</li>
+                    <li>Recognition at school assemblies and community events</li>
+                </ul>
+            </div>
+
+            <div class="tier-container silver-border">
+                <div class="tier-header">
+                    <h3 class="tier-title">SILVER SPONSOR</h3>
+                    <span class="tier-amount">$500+</span>
+                </div>
+                <p style="font-style: italic; font-weight: bold; color: #555; margin-top: 0; margin-bottom: 10px;">Community partner powering everyday team operations.</p>
+                <ul class="tier-list">
+                    <li>Logo on team competition banners and pit booth signage</li>
+                    <li>Sponsor mention on team social media accounts</li>
+                    <li>Name listed on team sponsorship handouts</li>
+                    <li>Invitation to attend home competitions</li>
+                    <li>Certificate of appreciation</li>
+                    <li>Newsletter feature in our season recap</li>
+                </ul>
+            </div>
+
+            <div class="tier-container bronze-border">
+                <div class="tier-header">
+                    <h3 class="tier-title">BRONZE SPONSOR</h3>
+                    <span class="tier-amount">$250+</span>
+                </div>
+                <p style="font-style: italic; font-weight: bold; color: #555; margin-top: 0; margin-bottom: 10px;">Friend of the program — every dollar reaches a student.</p>
+                <ul class="tier-list">
+                    <li>Name on team competition banner</li>
+                    <li>Sponsor shoutout on team social media accounts</li>
+                    <li>Name listed on sponsorship handouts</li>
+                    <li>Certificate of appreciation</li>
+                    <li>Newsletter mention</li>
+                </ul>
+            </div>
+
+            <div class="tier-container community-border">
+                <div class="tier-header">
+                    <h3 class="tier-title">COMMUNITY SUPPORTER</h3>
+                    <span class="tier-amount">$100+</span>
+                </div>
+                <p style="font-style: italic; font-weight: bold; color: #555; margin-top: 0; margin-bottom: 10px;">Grassroots support from neighbors, alumni, and small businesses.</p>
+                <ul class="tier-list">
+                    <li>Name listed on team sponsorship handouts</li>
+                    <li>Recognition on team social media accounts</li>
+                    <li>Thank-you card from the team</li>
+                    <li>Newsletter mention</li>
+                </ul>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center;">
+                <p style="font-size: 24px; font-weight: bold; color: #005270; margin-bottom: 20px;">
+                    A Special "Thank You" to all of our Sponsors and Supporters!!!
+                </p>
+                
+                <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAHKDtnXe18/crPhXn9o0bsKmXrXI2CgjQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHKDtnXe18&#x2F;crPhXn9o0bsKmXrXI2CgjQ&#x2F;view?utm_content=DAHKDtnXe18&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank"
+
+                
+            </div>
+        </section>
+        <br><br>
+    </main>
+</body>
+</html>
