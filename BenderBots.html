@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>PahokeeRobotics</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color:#C7E8F3;">
+         
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="PahokeeRoboticsIndex.html" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="#" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <br><br>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            
+            <a href="{{ url_for('high_school') }}" style="text-decoration: none; color: navy; font-weight: bold; font-size: 18px; display: inline-block; margin-bottom: 20px;">
+                <i class="fa-solid fa-arrow-left"></i> 🔺Back to High School Divisions
+            </a>
+
+          <div style="display: flex; justify-content: flex-end; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <a href="/OverviewBB.html" class="retro-btn">
+        View Team Overview
+    </a>
+</div>
+
+            <section style="text-align: left; margin-bottom: 40px; max-width: 800px;">
+                <h3 style="font-family: 'RainyHearts', Arial, sans-serif; color: navy; font-size: 32px; margin: 0 0 10px 0;">Basic Information</h3>
+                <p style="color: #333; line-height: 1.6; font-size: 16px; margin: 0 0 20px 0;">
+                    As of the current 2025-2026 year, Bender Bots consists of 15 members. 
+                    The team is mostly made up of freshmen while having 2 juniors. 
+                    The logo that represents Bender Bots is a robot that holds an oil container.
+                </p>
+                
+                <h3 style="font-family: 'RainyHearts', Arial, sans-serif; color: navy; font-size: 32px; margin: 0 0 5px 0;">Team Motto:</h3>
+                <p style="color: #333; line-height: 1.6; font-size: 18px; margin: 0; font-style: italic; font-weight: bold;">
+                    "Bending the limits of innovation!"
+                </p>
+            </section>
+
+        </div>
+
+        <section style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
+            <h2 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: navy; font-size: 50px; margin: 0;">Bender Bots</h2>
+            <p style="color: #EF6461; font-weight: bold; font-size: 20px; margin: 5px 0 0 0;">Team Number: #16724</p>
+            <p style="color: #EF6461; font-weight: bold; font-size: 20px; margin: 5px 0 0 0;">Years: Decode {2025-2026}</p>
+            <p style="color: #EF6461; font-weight: bold; font-size: 20px; margin: 5px 0 0 0; font-style:italic; font-weight:bold;">Team Quote: "We are Art"</p>
+
+            
+        </section>
+
+        <section class="member-grid">
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/1.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Never give up without ever trying, do what you can, 
+                            no matter how small the effect it may have!" - Naruto Uzumaki</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Stephanie Gonzalez</h4>
+                    <p class="character-role">Captain</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/2.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Do not go gentle into that good night” </p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Magaly Robles</h4>
+                    <p class="character-role">Co Captain and Main Builder</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/3.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"The wind may take me, but my greatness shall last forever."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Jennifer Fonseca</h4>
+                    <p class="character-role">Co-Captain and Lead Programmer</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/4.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Anything that can go wrong, will go wrong. I've tried not to rely on luck or hope for the
+                            things I want to achieve, instead I replace that luck with working towards what I have."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Lijeska Mairena</h4>
+                    <p class="character-role">Lead Sponsorship/Artist</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/5.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Live the Dream"</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">William Baltazar</h4>
+                    <p class="character-role">Notebook and Sponsorship</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/6.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Do the best you can until you know better. Then when you know better, do better."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Clarissa Segura</h4>
+                    <p class="character-role">Lead Social Media and Fundraising</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/7.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"The truth is I'm in pursuit of greatness. I know people don't talk like that, but I want
+                            to be the greatest."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Stacy Rojas</h4>
+                    <p class="character-role">Lead Fundraising and Social Media</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/8.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"In the end, we will be victorious!"</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Fernando Gonzalez</h4>
+                    <p class="character-role">Lead Builder and Coder </p>
+                </div>
+            </div>
+            
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/11.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Hakuna Matata, that's what we say."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Aurelio Martinez</h4>
+                    <p class="character-role">Builder</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/12.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"I left my quote at home"</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Alexis Gonzalez</h4>
+                    <p class="character-role">Coder</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/13.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"I left my quote at my friends house"</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Uriel Paniagua</h4>
+                    <p class="character-role">Social Media and Art</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/14.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Shoot for the moon. Even if you miss, you'll land among the stars”</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Scarlett Jimenez</h4>
+                    <p class="character-role">Lead Art Commitee</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/15.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"The ghost lingers in the shadows, nothing to conceal except greatness"</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Kate Paniagua</h4>
+                    <p class="character-role">Art Committee</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/16.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"The sun shines across the world, yet it is the light that makes everything beautiful."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Eva Cabrera</h4>
+                    <p class="character-role">Notebook</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(BB)/17.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"No matter how devastated you may be by your own weakness or uselessness,
+                             set your heart ablaze. Grit your teeth and look straight ahead.” - Kyojuro Rengoku </p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Zaiyan Dewan</h4>
+                    <p class="character-role">Lead Notebook</p>
+                </div>
+            </div>
+
+        </section>
+        <br><br>
+    </main>
+</body>
+</html>
