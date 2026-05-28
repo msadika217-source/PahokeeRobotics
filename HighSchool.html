@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics - High School Teams</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots </a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons </a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix </a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <br><br>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <a href="{{ url_for('teams') }}" style="text-decoration: none; color: #005270; font-weight: bold; font-size: 18px;">
+                <i class="fa-solid fa-arrow-left"></i> 🔺Back to All Teams
+            </a>
+        </div>
+
+        <section style="text-align: center; margin-top: 20px;">
+            <h2 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: #005270; font-size: 50px; margin: 0;">High School Teams</h2>
+            <p style="color: #087CA7; font-size: 20px; margin: 5px 0 0 0;">Select a team to view their description and their members!</p>
+        </section>
+
+        <br>
+
+        <section class="roster-grid">
+            <div class="student-card" style="background-color: #bfc5f787; background-image: url('/static/images/BBLogo.png'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 20px 30px 20px; box-sizing: border-box; min-height: 280px; position: relative; z-index: 1;">
+                <h3>
+                    <a href="{{ url_for('bender_bots') }}" class="team-title-link" style="background: #bfc5f7; padding: 6px 12px; border-radius: 8px; display: inline-block;">
+                        BenderBots
+                    </a>
+                </h3>
+            </div>
+
+            <div class="student-card" style="background-color: #a3abbd81; background-image: url('/static/images/MLogo.png'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 20px 30px 20px; box-sizing: border-box; min-height: 280px; position: relative; z-index: 1;">
+                <h3>
+                    <a href="{{ url_for('mechatrons') }}" class="team-title-link" style="background: #a3abbd81; padding: 6px 12px; border-radius: 8px; display: inline-block;">
+                        Mechatrons
+                    </a>
+                </h3>
+            </div>
+
+            <div class="student-card" style="background-color: #ff7d5d7f; background-image: url('/static/images/RPLogo.png'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 20px 30px 20px; box-sizing: border-box; min-height: 280px; position: relative; z-index: 1;">
+                <h3>
+                    <a href="{{ url_for('rising_phoenix') }}" class="team-title-link" style="background: #cb7a667f; padding: 6px 12px; border-radius: 8px; display: inline-block;">
+                        Rising Phoenix
+                    </a>
+                </h3>
+            </div>
+
+            <div class="student-card" style="background-color: #6489ca7c; background-image: url('/static/images/DLogo.png'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 20px 30px 20px; box-sizing: border-box; min-height: 280px; position: relative; z-index: 1;">
+                <h3>
+                    <a href="{{ url_for('dynamics') }}" class="team-title-link" style="background: #6489ca7c; padding: 6px 12px; border-radius: 8px; display: inline-block;">
+                        Dynamics
+                    </a>
+                </h3>
+            </div>
+        </section> <br><br>
+    </main>
+
+    <div class="screen-buddy-container">
+        <div class="buddy-bubble">
+            <span id="buddy-text">Hover over me for a cool robotics fact!</span>
+        </div>
+        <img src="/static/images/BBLogo.png" class="screen-buddy-avatar" alt="Mascot">
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const roboticsFacts = [
+            "The first FIRST Robotics Competition was held in 1992 in a gym in Manchester, NH, with only 28 teams.",
+            "The word 'Muck' in Muck City refers to the dark, hyper-fertile soil of the agricultural area around Pahokee.",
+            "FIRST was founded in 1989 by Dean Kamen, the inventor who created the Segway PT.",
+            "Pahokee High School was originally founded all the way back in 1928!",
+            "The name 'Pahokee' comes from a Seminole word meaning 'grassy waters.'",
+            "Woodie Flowers, a legendary MIT professor, coined the FIRST phrase 'Gracious Professionalism.'",
+            "Pahokee High School's official colors are Royal Blue and White! Go Blue Devils!",
+            "Pahokee is universally celebrated for producing an extraordinary number of elite NFL athletes.",
+            "Every season of the FIRST Robotics Competition features a completely brand-new game theme revealed in January.",
+            "Pahokee Robotics is built completely different!"
+        ];
+
+        const container = document.querySelector('.screen-buddy-container');
+        const bubbleText = document.getElementById('buddy-text');
+
+        container.addEventListener('mouseenter', function () {
+            const randomIndex = Math.floor(Math.random() * roboticsFacts.length);
+            bubbleText.textContent = roboticsFacts[randomIndex];
+        });
+    });
+    </script>
+</body>
+</html>
