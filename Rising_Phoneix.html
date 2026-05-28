@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+<title>PahokeeRobotics</title>
+<link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color:#C7E8F3;">
+		 
+		<header>
+			<h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+  						<a href="PahokeeRoboticsIndex.html" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+			</h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="#" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+     <main>
+        <br><br>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            
+            <a href="{{ url_for('high_school') }}" style="text-decoration: none; color: navy; font-weight: bold; font-size: 18px; display: inline-block; margin-bottom: 20px;">
+                <i class="fa-solid fa-arrow-left"></i> 🔺Back to High School Divisions
+            </a>
+
+          <div style="display: flex; justify-content: flex-end; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <a href="/OverviewRP.html" class="retro-btn">
+        View Team Overview
+    </a>
+</div>
+
+            <section style="text-align: left; margin-bottom: 40px; max-width: 800px;">
+                <h3 style="font-family: 'RainyHearts', Arial, sans-serif; color: navy; font-size: 32px; margin: 0 0 10px 0;">Basic Information</h3>
+                <p style="color: #333; line-height: 1.6; font-size: 16px; margin: 0 0 20px 0;">
+                    As of the current 2025-2026 year, Bender Bots consists of 15 members. 
+                    The team is mostly made up of freshmen while having 2 juniors. 
+                    The logo that represents Bender Bots is a robot that holds an oil container.
+                </p>
+                
+                <h3 style="font-family: 'RainyHearts', Arial, sans-serif; color: navy; font-size: 32px; margin: 0 0 5px 0;">Team Motto:</h3>
+                <p style="color: #333; line-height: 1.6; font-size: 18px; margin: 0; font-style: italic; font-weight: bold;">
+                    "Bending the limits of innovation!"
+                </p>
+            </section>
+
+        </div>
+
+        <section style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
+            <h2 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: navy; font-size: 50px; margin: 0;">Rising Phoenix</h2>
+            <p style="color: #EF6461; font-weight: bold; font-size: 20px; margin: 5px 0 0 0;">Team Number: #16724</p>
+            <p style="color: #EF6461; font-weight: bold; font-size: 20px; margin: 5px 0 0 0;">Years: Decode {2025-2026}</p>
+            <p style="color: #EF6461; font-weight: bold; font-size: 20px; margin: 5px 0 0 0; font-style:italic; font-weight:bold;">Team Quote: "We are Art"</p>
+
+            
+        </section>
+
+        <section class="member-grid">
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/33.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Being curious is the catalyst to innovating the big thing that’ll impact
+                             lives.” - Giovani M.</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Giovani Mendez-Leon</h4>
+                    <p class="character-role">Builder</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                    <div class="portrait-frame">
+                        <img src="/static/students(RisingP)/default.png" alt="Member Photo" class="portrait-img">
+                        <div class="quote-overlay">
+                            <p class="quote-text">"Supporting team leadership, keeping our communication matrix clean, and running fundraising arrays."</p>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h4 class="character-name">Sofia Ruiz</h4>
+                        <p class="character-role">Co-Captain, Fundraising & Outreach Lead</p>
+                    </div>
+                </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/30.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Don't look back because the future only faces forward."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Otavianna Smith</h4>
+                    <p class="character-role">Lead Builder and Co Captain</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/31.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"We are all in the gutter, but some of us are looking at the stars“ - Oscar Wilde </p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Francisco Gutierrez </h4>
+                    <p class="character-role">Captain and Notebook</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/32.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Once you have whipped the enemy from the fleet... you must come back, Patroclus. 
+                            You must not burn for war against these Trojans... not without me you will only make my glory that much less." - The Song of Achilles</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Ashley Prieto</h4>
+                    <p class="character-role">Notebook</p>
+                </div>
+            </div>
+
+        
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/34.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Alan Orduna</h4>
+                    <p class="character-role">Builder</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/35.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Martin Perez</h4>
+                    <p class="character-role">Social Media Manager (might change)</p>
+                </div>
+            </div>
+
+             <div class="character-card">
+                    <div class="portrait-frame">
+                        <img src="/static/students(RisingP)/default.png" alt="Member Photo" class="portrait-img">
+                        <div class="quote-overlay">
+                            <p class="quote-text">"Generating creative visual designs, collecting project data logs, and running social platforms."</p>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h4 class="character-name">Adamaris Medina</h4>
+                        <p class="character-role">Media Team Core</p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="portrait-frame">
+                        <img src="/static/students(RisingP)/default.png" alt="Member Photo" class="portrait-img">
+                        <div class="quote-overlay">
+                            <p class="quote-text">"Organizing local outreach events, community STEM labs, and active primary mentoring sub-routines."</p>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h4 class="character-name">Dannai Huerta</h4>
+                        <p class="character-role">Outreach Lead</p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="portrait-frame">
+                        <img src="/static/students(RisingP)/default.png" alt="Member Photo" class="portrait-img">
+                        <div class="quote-overlay">
+                            <p class="quote-text">"Communicating with corporate sponsors, running fundraising streams, and tracking capital support."</p>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h4 class="character-name">Viviana Calderon</h4>
+                        <p class="character-role">Sponsorship Lead</p>
+                    </div>
+                </div>
+
+
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/37.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Yoni Paniagua</h4>
+                    <p class="character-role">Coder, Social Media </p>
+                </div>
+            </div>
+
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/39.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Jesus Zavala</h4>
+                    <p class="character-role">Social Media</p>
+                </div>
+            </div>
+
+            
+
+        </section>
+        <br><br>
+    </main>
+</body>
+</html>
