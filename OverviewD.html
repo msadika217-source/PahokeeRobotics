@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">     
+    <link rel="stylesheet" href="https://use.typekit.net/qaw7nlm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+         
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="#" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="overview-container">
+            
+            <div class="back-btn-container">
+                <a href="{{ url_for('bender_bots') }}" class="retro-back-btn">
+                    ◁ BACK TO ROSTER
+                </a>
+            </div>
+
+            <section class="pixel-window hero-window">
+                <div class="window-title">Bender Bots #16724</div>
+                <p class="hero-subtitle">» Season Mission Log & Data Matrix</p>
+                <p class="dense-text hero-summary">
+                    Bender bots is a team that has accomplished many things over the past years from several groups. Our team has brought out the best of our members capabilities and creativity to innovate while giving back to our community.
+                </p>
+            </section>
+
+            <div class="pixel-grid-2">
+                
+                <div class="pixel-window">
+                    <div class="window-title">Team Intel Profile</div>
+                    <p class="dense-text">
+                        Established in Pahokee, Florida, Bender Bots team 16724 consists of an even bigger group than the previous year with 15 active members. Our team consists of new members with it being 13 freshmen and 2 juniors. Some of our current team members have been in robotics in the past while others are brand new learning members. Our team strives to embark on a new journey within the world of robotics.
+                    </p>
+                    <p class="dense-text">
+                        Everyone plays a role in building the team that we are, from a captain, co-captain, builders, coders, to the social media team, notebook, and artists. Our team goal is to represent Pahokee High School as a school that not only excels through sports but also through STEM and academics.
+                    </p>
+                    
+                    <div class="inventory-item">
+                        <span class="item-label text-gold">CORE ATTRIBUTES:</span>
+                        <p class="dense-text small-text">
+                            Determination to keep moving forward, big team spirit, extreme creativity, and a relentless urge for individuality. We push outside comfort zones and never hide our flaws.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pixel-window sidebar-layout">
+                    <div>
+                        <div class="window-title">Status Matrix</div>
+                        <div class="stat-box stat-red">
+                            <div class="stat-label">Party Size</div>
+                            <div class="stat-value">15 Active</div>
+                        </div>
+                        <div class="stat-box stat-teal">
+                            <div class="stat-label">Unit Base</div>
+                            <div class="stat-value small-val">Pahokee, FL</div>
+                        </div>
+                    </div>
+
+                    <div class="inventory-item mentor-item">
+                        <span class="item-label text-gold">Guild Masters:</span>
+                        <span class="mentor-line">• D. Cortes (Coach)</span>
+                        <span class="mentor-line">• L. Paniagua (Coach)</span>
+                        <span class="mentor-line">• A. Burciaga (Mentor)</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pixel-window">
+                <div class="window-title">Command Support Protocol</div>
+                <p class="dense-text quote-text">
+                    "Our coaches are always there when we need them and are always willing to help us work out our problem by helping us try to figure it out but letting us explore new ideas and figuring it out ourselves which helps us develop our knowledge. They are always opening new doors for us to better ourselves and to experience new, better opportunities."
+                </p>
+            </div>
+
+            <div class="pixel-window">
+                <div class="window-title">Mech Specifications: "Bendy"</div>
+                <p class="dense-text">
+                    We decided to name our robot “Bendy”. We wanted a name that would connect all of us through the robot, while keeping it fun and admirable. Our team is always going through challenges while bending the limits of innovation. As a team, Bendy has become a part of our robotics family.
+                </p>
+                
+                <div class="inventory-item tech-item">
+                    <span class="item-label text-teal">ENGINEERING MODIFICATIONS:</span>
+                    <p class="dense-text small-text">
+                        Our final robot has the same nature as our last mechanisms, such as the intake/outtake, but we decided on torching down the metal sheet to our incline supporter because before, the sheet would lift just enough that artifacts got stuck. We reduced spacing in the intake wheels for maximum rubber band grip. Bendy is now fully optimized to store 3 artifacts simultaneously instead of 2.
+                    </p>
+                </div>
+
+                <div class="inventory-item ability-item">
+                    <span class="item-label text-purple">⭐ SIGNATURE ABILITY: SHARP SHOOTING</span>
+                    <p class="dense-text small-text">
+                        When Bendy is in the zone there is no stopping it—it makes sharp and consistent shooting tracking. Features a lucky blue star sticker mounted on the top outtake control motor to commemorate our journey.
+                    </p>
+                </div>
+
+                <div class="node-section">
+                    <span class="node-title">Unlocked Node Specialties:</span>
+                    <div class="pixel-badge-grid">
+                        <span class="pixel-badge">Building</span>
+                        <span class="pixel-badge">Programming</span>
+                        <span class="pixel-badge">CAD</span>
+                        <span class="pixel-badge">Driving</span>
+                        <span class="pixel-badge">Strategy</span>
+                        <span class="pixel-badge">Outreach</span>
+                        <span class="pixel-badge">Fundraising</span>
+                        <span class="pixel-badge">Documentation</span>
+                        <span class="pixel-badge">Media Core</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pixel-window">
+                <div class="window-title">Campaign Journey & Strategy Obstacles</div>
+                <p class="dense-text">
+                    As newcomers to FTC, we encountered a heavy learning curve with advanced codebase logic, battery resource draining, and mechanical path blocks. We solved the power leaks by restructuring code routines and securing funds via the outreach squad. 
+                </p>
+                <p class="dense-text">
+                    When the intake channel jammed during Match #3, our hardware group diagnosed an elevated launcher plate profile. Because the high-strength metal layout resisted standard forming tools, the team applied thermal optimization (torching/melting elements slightly) to safely realign the geometry before Regional qualifications. 
+                </p>
+                <p class="dense-text">
+                    Outside the engineering grid, when a corporate partner ghosted us mid-campaign, we preserved our fighting spirit, re-routed our schedule, and locked in a successful local business fundraiser instead.
+                </p>
+
+                <div class="pixel-grid-2 sub-grid">
+                    <div class="inventory-item border-teal">
+                        <span class="item-label text-teal">CAMPAIGN DIRECTIVES:</span>
+                        <p class="dense-text field-text">
+                            Assign distinct operational nodes to match individual skill sets; ensure global club inclusion across every design iteration; execute strict milestone management; scale up automated path score rates across all fields.
+                        </p>
+                    </div>
+                    <div class="inventory-item border-purple">
+                        <span class="item-label text-purple">UNIQUE BUFFS:</span>
+                        <p class="dense-text field-text">
+                            Happy-go-lucky baseline mentality, unbroken recovery rates after defeats, and an all-female executive board commanding captain positions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pixel-window">
+                <div class="window-title">Achievements Unlocked</div>
+                
+                <div class="award-box">
+                    <span class="award-title">🏆 UNLOCKED: THE THINK AWARD (2025-2026)</span>
+                    <p class="dense-text field-text text-white">
+                        Celebrated for best documenting our engineering process and displaying a highly meticulous blueprint execution mapping our route.
+                    </p>
+                </div>
+
+                <span class="log-header">System Competition Logs:</span>
+                <div class="quest-log-box">
+                    <div class="log-entry">[10/11/2025] • FUN League Scrimmage @ Boca Raton High Cafeteria ➔ Status: COMPLETE (N/A)</div>
+                    <div class="log-entry">[11/01/2025] • FUN League Meet #1 @ Boca Raton High Gym ➔ Status: COMPLETE (N/A)</div>
+                    <div class="log-entry">[12/06/2025] • FUN League Meet #2 @ Boca Raton High Gym ➔ Status: COMPLETE (N/A)</div>
+                    <div class="log-entry">[01/17/2026] • FUN League Meet #3 @ Boca Raton High Gym ➔ Status: COMPLETE (N/A)</div>
+                    <div class="log-entry final-entry">[01/31/2026] • FUN League Tournament @ Boca Raton High Gym ➔ Rank: 18/26</div>
+                </div>
+
+                <div class="inventory-item accomplishment-box">
+                    <span class="item-label text-red">PROUDEST ACHIEVEMENT DATA NODE:</span>
+                    <p class="dense-text small-text">
+                        Proving that our small community creates both world-class athletes and brilliant STEM leaders. We started from scratch, launched a pipeline mentorship program with our elementary school, and held our ground dynamically against veteran groups.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pixel-window">
+                <div class="window-title">Outreach Matrix & Community Impact</div>
+                
+                <div class="milestone-box">
+                    <span class="milestone-title">⚙️ MILESTONE SUB-ROUTINE:</span>
+                    <p class="dense-text small-text text-white">
+                        Founded and co-started an active FLL team at Pahokee Elementary. Members travel there weekly to run active coding/building mentorship boot camps.
+                    </p>
+                </div>
+
+                <div class="timeline-scroll-container">
+                    <strong>Mission Timeline Sublogs:</strong><br>
+                    • Nov 5-21: Organized public food security drives across high school networks.<br>
+                    • Oct 31: Deployed sweet-treat distribution protocols at primary care stations.<br>
+                    • Qualifier 1: Built custom 3D-printed trophies to manage thematic seasonal challenges.<br>
+                    • Heritage Celebrations: Managed resource logistics booths (Taco fundraising arrays).<br>
+                    • Regional Visits: Handed off manual design insights directly to Superintendent Burke.<br>
+                    • Feb 25, 2026: Gained advanced engineering strategies from UF SHPE teams.<br>
+                    • Mar 11, 2026: Signed a functional strategic tech partnership with PBSO Bomb Squad.<br>
+                    • Mar 17, 2026: Handed off project design reviews to the Rotary Club board.<br>
+                    • Mar 21-26: Deployed simulated programming modules (FTC Sim) inside mobile PBSO simulation rigs across Canal Point.
+                </div>
+
+                <p class="dense-text net-impact">
+                    <strong>Net Impact Output:</strong> Lowered entry barriers for local elementary students into technical systems, generated critical global social problem awareness, and reinforced regional municipal partnerships.
+                </p>
+            </div>
+
+            <div class="pixel-window">
+                <div class="window-title">Character Progression & Attribute Growth</div>
+                <div class="dense-text">
+                    • <strong>Fernando Gonzalez (Build Node):</strong> Scaled expertise from elementary hardware fast-fastening up to core structural blueprint manipulation and system configuration design modifications.<br>
+                    • <strong>Jennifer Fonseca (Code Node):</strong> Progressed from clean slate base knowledge up to a certified operational team Lead Programmer, managing our syntax loops independently.<br>
+                    • <strong>Alexis Gonzalez (Social Node):</strong> Defeated heavy baseline introversion properties to unlock advanced group coordination, transparent communications, and leadership properties.
+                </div>
+                <div class="growth-summary-box">
+                    <div class="summary-node"><span class="text-gold">[GROWTH]</span> Exponential technical capability elevation.</div>
+                    <div class="summary-node"><span class="text-red">[CORE LESSON]</span> Time-management arrays require absolute priority. Clock speeds run fast.</div>
+                </div>
+            </div>
+
+            <div class="pixel-window center-text">
+                <div class="window-title title-center">Establish Link Network</div>
+                <p class="dense-text center-text buffer-bottom">
+                    Synchronize tracking with Bender Bots telemetry pipelines:
+                </p>
+                
+                <div class="arcade-btn-row">
+                    <a href="https://www.instagram.com/benderbots_16724?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="arcade-social-btn btn-insta">
+                        <i class="fa-brands fa-instagram"></i> INSTAGRAM
+                    </a>
+                    <a href="https://www.youtube.com/@BenderBots16724" target="_blank" class="arcade-social-btn btn-youtube">
+                        <i class="fa-brands fa-youtube"></i> YOUTUBE
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
