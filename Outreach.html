@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>PahokeeRobotics - Our Outreach</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* 1. ENSURE RAINYHEARTS FONT REGISTRATION */
+        @font-face {
+            font-family: 'RainyHearts';
+            src: url('/static/RainyHearts.ttf') format('truetype'); /* Adjust extension if it is different */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 2. UPGRADED BLUE, WHITE, & RED little chart layout */
+        .stats-banner {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            background: #003b5c; /* Deep  Blue */
+            padding: 30px 20px;
+            border-radius: 16px;
+            margin: 0 auto 50px auto;
+            max-width: 1000px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            gap: 20px;
+        }
+        .stat-box {
+            text-align: center;
+            background: #ffffff; /* Crisp White Cards */
+            flex: 1;
+            min-width: 190px;
+            padding: 25px 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        /* Vibrant Red Top Accent Line on each card */
+        .stat-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: #e4002b; /* Vibrant Red Highlight */
+        }
+        .stat-number {
+            font-family: 'RainyHearts', Arial, sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+            color: #e4002b; /* Bold Red Numbers */
+            margin: 0;
+            line-height: 1;
+        }
+        .stat-label {
+            font-family: 'RainyHearts', Arial, sans-serif; /* Applied RainyHearts */
+            font-size: 24px; /* Slightly larger to fit pixel font styling beautifully */
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 12px 0 0 0;
+            color: #003b5c; /* Deep blue contrast text */
+        }
+    </style>
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+                
+    <main>
+        <br> <br> <br>
+        <section class="intro" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+            <div class="intro-text">
+                <h2 style="text-align: center; font-family: 'Jerseyletters-IP5V', sans-serif; color: #005270; font-size: 50px; margin-bottom: 30px;">Our Outreach</h2>
+            </div>
+
+            <div class="stats-banner">
+                <div class="stat-box">
+                    <p class="stat-number" data-target="187">0</p>
+                    <p class="stat-label">Hours of FLL Mentoring</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-number" data-target="5149">0</p>
+                    <p class="stat-label">Hours of working on the Robot</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-number" data-target="1040">0</p>
+                    <p class="stat-label">Outreach Hours</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-number" data-target="58196">0</p>
+                    <p class="stat-label">People Impacted</p>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 60px; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 12px;">
+                <img src="/static/images/Outreach/IMG_4398 Small.jpeg" alt="Outreach Event 1" width="350px" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="color: #005270; margin-top: 0; font-size: 24px;">1. LC Swan</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: #333;">Reached out to them to learn a better understanding of their career</p>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap-reverse; margin-bottom: 60px; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 12px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="color: #005270; margin-top: 0; font-size: 24px;">2. Torry Island: Bringing Awareness to Robotics in our community </h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: #333;">We showcased our robot to our community in order to bring awareness to Robotics. </p>
+                </div>
+                <img src="/static/images/Outreach/IMG_6533.PNG" alt="Outreach Event 2" width="350px" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0;">
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 60px; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 12px;">
+                <img src="/static/images/Outreach/IMG_5277.jpeg" alt="Outreach Event 3" width="350px" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="color: #005270; margin-top: 0; font-size: 24px;">3. Palm Beach Sherrif Office</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: #333;"> The Sherrif department visited our school to give a general idea about themselves and we demonstrated our passion for robotics.</p>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap-reverse; margin-bottom: 60px; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 12px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="color: #005270; margin-top: 0; font-size: 24px;">4. Mentoring Pahokee Elementary</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: #333;"> We provided mentoring and guidance to students at Pahokee Elementary School to inspire their interest
+                         in robotics and engineering. In specific terms, we taught them the basic idea of programming and a taste of driving the robot</p>
+                </div>
+                <img src="/static/images/Outreach/IMG_7103.jpeg" alt="Outreach Event 4" width="350px" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0;">
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 60px; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 12px;">
+                <img src="/static/images/Outreach/IMG_5853.jpeg" alt="Outreach Event 5" width="350px" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="color: #005270; margin-top: 0; font-size: 24px;">5. Lockheed Martin</h3>
+                    <p style="font-size: 16px; line-height: 1.6; color: #333;">Military based facility in regards to engineering who we reached out to.</p>
+                </div>
+            </div>
+
+        </section>
+        <br><br>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const animationDuration = 2000; 
+
+            const startCounting = (counter) => {
+                const target = parseInt(counter.getAttribute('data-target'), 10);
+                const startTime = performance.now();
+
+                const updateCount = (currentTime) => {
+                    const elapsedTime = currentTime - startTime;
+                    
+                    if (elapsedTime < animationDuration) {
+                        const progress = elapsedTime / animationDuration;
+                        const currentCount = Math.floor(progress * target);
+                        
+                        counter.innerText = currentCount;
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                requestAnimationFrame(updateCount);
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounting(entry.target);
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            counters.forEach(counter => observer.observe(counter));
+        });
+    </script>
+</body>
+</html>
