@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics - Gallery</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+                
+    <main>
+        <br><br>
+        <section style="max-width: 1200px; margin: 0 auto; padding: 0 20px; font-family: Arial, sans-serif;">
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: #005270; font-size: 45px; margin: 0 0 10px 0;">TEAM GALLERY</h2>
+                <p style="font-family: 'RainyHearts', sans-serif; font-size: 22px; color: #005270; margin: 0 0 25px 0;">Explore our season highlights</p>
+                
+                <div class="gallery-controls">
+                    <button id="btn-grid" class="control-btn active" onclick="switchToGrid()">
+                        <i class="fa-solid fa-table-cells"></i> GRID VIEW
+                    </button>
+                    <button id="btn-slideshow" class="control-btn" onclick="switchToSlideshow()">
+                        <i class="fa-solid fa-play"></i> GALLERY MODE
+                    </button>
+                </div>
+            </div>
+
+            <div class="gallery-stage">
+                <div id="grid-view" class="gallery-grid"></div>
+
+                <div id="slideshow-view" class="gallery-slideshow" style="display: none;">
+                    <div class="slideshow-container">
+                        <button class="nav-arrow prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <div id="slides-wrapper" style="width: 100%; height: 100%;"></div>
+                        <button class="nav-arrow next" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+                    <p id="slideshow-caption"></p>
+                </div>
+            </div>
+        </section>
+        <br><br>
+    </main>
+
+    <script>
+        //Unknown console.error();
+        
+        // Safely map incoming python array backend paths
+        const imageList = {{ Gallery | tojson if Gallery else '[]' }};
+        let slideIndex = 0;
+        let slideshowTimer = null;
+
+        // CRITICAL FIX: Build elements synchronously BEFORE calculating slideshow positions
+        // Before the images were in HEIC = not working
+        window.addEventListener('DOMContentLoaded', () => {
+            const gridView = document.getElementById('grid-view');
+            const slidesWrapper = document.getElementById('slides-wrapper');
+
+            if (!imageList || imageList.length === 0) {
+                gridView.innerHTML = "<p style='font-family:\"RainyHearts\"; font-size:24px; text-align:center; width:100%; color:#005270;'>No images found in the gallery folders!</p>";
+                return;
+            }
+
+            imageList.forEach((imgSrc, index) => {
+                // 1. Append Grid Card
+                const gridItem = document.createElement('div');
+                gridItem.className = 'grid-item';
+                gridItem.innerHTML = `<img src="${imgSrc}" alt="Robotics Photo ${index + 1}" onclick="openSlideshowAt(${index})">`;
+                gridView.appendChild(gridItem);
+
+                // 2. Append Hidden Stage Slide
+                const slideItem = document.createElement('div');
+                slideItem.className = 'my-slides';
+                slideItem.style.display = 'none'; // Ensure it starts safe and hidden
+                slideItem.innerHTML = `<img src="${imgSrc}" alt="Robotics Photo ${index + 1}">`;
+                slidesWrapper.appendChild(slideItem);
+            });
+            
+            // Prime the system layout now that nodes exist safely in memory
+            showSlides(slideIndex);
+        });
+
+        function switchToGrid() {
+            clearInterval(slideshowTimer);
+            document.getElementById('slideshow-view').style.display = 'none';
+            document.getElementById('grid-view').style.display = 'grid';
+            document.getElementById('btn-slideshow').classList.remove('active');
+            document.getElementById('btn-grid').classList.add('active');
+        }
+
+        function switchToSlideshow() {
+            document.getElementById('grid-view').style.display = 'none';
+            document.getElementById('slideshow-view').style.display = 'block';
+            document.getElementById('btn-grid').classList.remove('active');
+            document.getElementById('btn-slideshow').classList.add('active');
+            
+            showSlides(slideIndex);
+            clearInterval(slideshowTimer); 
+            slideshowTimer = setInterval(function() { changeSlide(1); }, 3500); 
+        }
+
+        function openSlideshowAt(index) {
+            slideIndex = index;
+            switchToSlideshow();
+        }
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("my-slides");
+            let caption = document.getElementById("slideshow-caption");
+            
+            // Prevent crashes if user interacts before browser registers arrays
+            if (!slides || slides.length === 0) return;
+            
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            if(slides[slideIndex]) {
+                slides[slideIndex].style.display = "block";
+                caption.innerText = "IMAGE " + (slideIndex + 1) + " / " + slides.length;
+            }
+        }
+    </script>
+</body>
+</html>
