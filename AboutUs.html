@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+         
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <br><br>
+       
+        
+        <br> <br> <br>
+        <section class="intro" style="display: flex; align-items: center; justify-content: center; gap: 50px; padding: 0 20px;">
+            <img src="/static/images/RANDOM.JPG" alt="teamPicWithHearts" width="300px" style="flex-shrink: 0;">
+            <div class="intro-text" style="flex: 1;">
+                <h3 style="text-align: center;">We're middle and high school students</h3>
+                <h3 style="text-align: center;">who are developing the skills such as leadership,</h3> 
+                <h3 style="text-align: center;">collaboration, gracious professionalism, and </h3>
+                <h3 style="text-align: center;">kindness in order to create robots and promote STEM to our community!</h3>
+            </div>
+            <img src="/static/images/picPretty.JPG" alt="Pahokee nice pic" width="300px" style="flex-shrink: 0;">
+        </section>
+        
+        <br> 
+        <h2 style="text-align: center; font-family: 'Jerseyletters-IP5V', sans-serif; color: #005270; font-size: 50px;">Pahokee PRIDE</h2>
+        <img src="/static/images/transparent backgrounds/blueblue.png" alt="Pahokee PRIDE Logo" width="300px" style="display: block; margin-left: auto; margin-right: auto;">
+
+        <div style="display: flex; align-items: center; justify-content: center; gap: 50px; margin-top: 20px;">
+            <div class="pride-container">
+                <div class="pride-item" style="text-align: center;">
+                    <h3 style="display: inline-block; margin-left: 20%; margin-right: 20%; color: #087CA7; font-size: 40px;">We are...</h3>
+                    <div style="text-align: center; color: #087CA7;">
+                        <h2 style="display: inline-block; color: #087CA7; font-size: 60px; margin: 0 2px;">P</h2>
+                        <p style="display: inline-block; color: #087CA7; font-size: 20px; margin-right: 15px;">ositive</p>
+
+                        <h2 style="display: inline-block; color: #087CA7; font-size: 60px; margin: 0 2px;">R</h2>
+                        <p style="display: inline-block; color: #087CA7; font-size: 20px; margin-right: 15px;">espectful</p>
+
+                        <h2 style="display: inline-block; color: #087CA7; font-size: 60px; margin: 0 2px;">I</h2>
+                        <p style="display: inline-block; color: #087CA7; font-size: 20px; margin-right: 15px;">ntegrity</p>
+
+                        <h2 style="display: inline-block; color: #087CA7; font-size: 60px; margin: 0 2px;">D</h2>
+                        <p style="display: inline-block; color: #087CA7; font-size: 20px; margin-right: 15px;">ependable</p>
+
+                        <h2 style="display: inline-block; color: #087CA7; font-size: 60px; margin: 0 2px;">E</h2>
+                        <p style="display: inline-block; color: #087CA7; font-size: 20px;">mpowered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </main>
+</body>
+</html>
