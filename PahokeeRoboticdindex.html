@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">     
+    <link rel="stylesheet" href="https://use.typekit.net/qaw7nlm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+         
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots </a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+                
+    <main>
+        <br>
+        <br>
+		<div class="center">
+			<a href="https://www.facebook.com/PMHSRobotics" target="_blank" rel="noopener noreferrer">
+			<img src="/static/images/facebook red gear.png" alt="Facebook" width="5%" class="social-icon">
+			</a>
+			<a href="https://www.instagram.com/blue.devil.robotics" target="_blank" rel="noopener noreferrer">
+			<img src="/static/images/instagram blue gear.png" alt="Instagram" width="5%" class="social-icon">
+			</a>	
+			<a href="https://www.tiktok.com/@pahokee_robotics" target="_blank" rel="noopener noreferrer">
+			<img src="/static/images/tiktok-graygear.png" alt="Tik Tok" width="5%" class="social-icon">
+			</a>
+		</div>
+
+
+		<div style="display: flex; justify-content: center; align-items: center; gap: 30px;">
+			<img src="/static/images/transparent backgrounds/PRtopwhite.png" width="300px" alt="PRtopwhite" style="margin-left: 5%;">
+			<div style="text-align: center;">
+				<h1 style="font-size: 40px;"> Pahokee Middle-High Robotics</h1>
+				<h2> A robotics team located </h2>
+				<h2>  in Pahokee, Florida</h2>
+			</div>
+			<img src="/static/images/map.jpeg" width="300px" alt="map" style="margin-right: 5%;">
+		</div>
+
+<br>
+<br>
+
+        <br><br>
+
+        <div style="text-align: center; max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <h1 style="font-size: 40px; color: #005270; margin-bottom: 20px;">Recent Achievements</h1>
+
+            <img src="/static/images/betterTeamPic.jpg" width="100%" style="max-width: 800px; display: block; margin: 0 auto 20px auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" alt="awards">
+            
+            <h1 style="color: #087CA7; margin: 10px 0;">Congratulations!</h1>
+            <h2 style="font-size: 22px; font-weight: normal; margin: 8px 0; color: #333;">- 1st Place at the Pahokee Regional: Mechatrons #16333 & RoBOCAts #20022</h2>
+            <h2 style="font-size: 22px; font-weight: normal; margin: 8px 0; color: #333;">- 1st Place: Reach award - Mechatrons #16333</h2>
+            <h2 style="font-size: 22px; font-weight: normal; margin: 8px 0; color: #333;">- 1st Place: Control Award - Rising Phoenix #23812</h2>
+            <h2 style="font-size: 22px; font-weight: normal; margin: 8px 0; color: #333;">- 2nd Place: Connect Award: Mechamotion #31423</h2>
+            <h2 style="font-size: 22px; font-weight: normal; margin: 8px 0; color: #333;">- 1st Place: Think Award: Benderbots #16724</h2>
+            <h2 style="font-size: 22px; font-weight: normal; margin: 8px 0; color: #333;">- 3rd Place: Inspire Award: Dynamics #21922</h2>
+
+            <br> 
+            <h2 style="color: #005270; font-size: 26px; margin-bottom: 10px;">Teams Advancing to State Championship</h2>
+            <ul style="list-style-position: inside; padding: 0; margin: 0;"> 
+                <li style="font-size: 20px; font-weight: bold; color: #087CA7; list-style-type: none; margin: 5px 0;">𓇼 Mechatrons𓇼 </li>
+                <li style="font-size: 20px; font-weight: bold; color: #087CA7; list-style-type: none; margin: 5px 0;">𓇼 Dynamics 𓇼 </li>
+            </ul>
+        </div>
+        <br><br>
+    </main>
+</body>
+</html>
