@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>PahokeeRobotics - Dynamics</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+         
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <br><br>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <a href="{{ url_for('high_school') }}" style="text-decoration: none; color: navy; font-weight: bold; font-size: 18px;">
+                <i class="fa-solid Mill fa-arrow-left"></i> 🔺Back to High School Divisions
+            </a>
+        </div>
+
+        <section style="text-align: center; margin-top: 20px;">
+            <h2 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: navy; font-size: 50px; margin: 0;">Dynamics</h2>
+            <p style="color: #EF6461; font-weight: bold; font-size: 20px; margin: 5px 0 0 0;"></p>
+        </section>
+
+        <section class="member-grid">
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(RisingP)/38.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Jeshua Serrano </h4>
+                    <p class="character-role">Social Media and Art</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(RisingP)/36.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Preston Cabrera</h4>
+                    <p class="character-role">Social Media</p>
+                </div>
+            </div>
+
+             <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/25.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"^U^"</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Itzel Solis</h4>
+                    <p class="character-role">Coder, Social Media </p>
+                </div>
+            </div>
+        </section>
+
+        <div style="width: 100%; text-align: center; margin: 50px 0 30px 0; clear: both;">
+            <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: navy; font-size: 42px; margin: 0; display: inline-block;">Previous Members</h1>
+        </div>
+
+        <section class="member-grid">
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/40.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">David Roa</h4>
+                    <p class="character-role">Builder</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/41.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Jaylyn Hernandez</h4>
+                    <p class="character-role">Builder</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/42.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Yayren Prieto</h4>
+                    <p class="character-role">Social Media Manager (might change)</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/43.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Mathania Saint-Hubert</h4>
+                    <p class="character-role">Social Media</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/44.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Sadia Anika</h4>
+                    <p class="character-role">Social Media and Art</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/45.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Yasuri Calderon</h4>
+                    <p class="character-role">Social Media</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/46.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Ashley Genin</h4>
+                    <p class="character-role">Photographer</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/47.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Martrell Mincey</h4>
+                    <p class="character-role">Social Media and Art</p>
+                </div>
+            </div>
+
+             <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/Students(D)/48.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Eduardo Larios</h4>
+                    <p class="character-role">Social Media and Art</p>
+                </div>
+            </div>
+        </section>
+        <br><br>
+    </main>
+</body>
+</html>
