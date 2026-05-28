@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics - Resources</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots (9th)</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons (10th)</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix (11th)</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamic (12th)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+                
+    <main>
+        <br><br><br>
+        <section class="resources" style="max-width: 1000px; margin: 0 auto; padding: 0 20px; font-family: Arial, sans-serif;">
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: #005270; font-size: 50px; margin: 0 0 10px 0;">Team Resources</h2>
+                <p style="font-family: 'RainyHearts', sans-serif; font-size: 22px; color: #005270; margin: 0 0 25px 0;">Guides, documentation, and useful presentation links</p>
+            </div>
+
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; box-shadow: 0 4px 15px rgba(0,0,0,0.15); margin-top: 1.6em; margin-bottom: 1.5em; overflow: hidden; border-radius: 12px; will-change: transform;">
+                <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
+                        src="https://www.canva.com/design/DAHKHy9LxG8/G5q90PpwUL7v5VyXXrz5Og/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                </iframe>
+            </div>
+            
+            
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                
+
+                <div style="background: rgba(255,255,255,0.4); padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: #005270; margin-top: 0; font-size: 22px;"><i class="fa-solid fa-gavel"></i> FTC Game Rules</h3>
+                    <p style="color: #333; line-height: 1.5; font-size: 15px;">Quick references to official game manuals, appendix rulings, referee updates, and inspection checklists.</p>
+                    <a href="https://ftc-resources.firstinspires.org/ftc/game/manual" style="color: #087CA7; text-decoration: none; font-weight: bold; font-size: 14px;">Read Game Manual &rarr;</a>
+                </div>
+
+            </div>
+
+        </section>
+        <br><br>
+    </main>
+</body>
+</html>
