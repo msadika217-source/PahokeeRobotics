@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>PahokeeRobotics - Our Teams</title>
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="PahokeeRoboticsIndex.html" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="#" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots </a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons </a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix </a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <br><br>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <a href="{{ url_for('teams') }}" style="text-decoration: none; color: #005270; font-weight: bold; font-size: 18px;">
+                <i class="fa-solid fa-arrow-left"></i> Back to All Teams
+            </a>
+        </div>
+    
+    <main>
+        <br><br><br>
+        <section class="intro">
+            <div class="intro-text">
+                <h2 style="text-align: center; font-family: 'Jerseyletters-IP5V', sans-serif; color: #005270; font-size: 40px; margin-bottom: 20px;">Our Teams</h2>
+            </div>
+
+            <div class="middle" style="display: flex; justify-content: center; align-items: flex-start; gap: 60px; flex-wrap: wrap;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h2><a href="MiddleSchool.html" style="text-decoration: none; color: #493548;">Middle School</a></h2>
+                    <a href="MiddleSchool.html">
+                        <img src="/static/images/FLLteam.HEIC" width="600px" alt="FLL Team" style="cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    </a>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h2><a href="HighSchool.html" style="text-decoration: none; color: #493548;">High School</a></h2>
+                    <a href="HighSchool.html">
+                        <img src="/static/images/fullTeam.HEIC" width="600px" alt="Full Team" style="cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
