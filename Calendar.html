@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Pahokee Robotics - Calendar</title>
+    
+    <link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link href="/static/jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/jQueryAssets/jquery.ui.datepicker.min.css" rel="stylesheet" type="text/css">
+    
+    <script src="/static/jQueryAssets/jquery-1.11.1.min.js"></script>
+    <script src="/static/jQueryAssets/jquery.ui-1.10.4.datepicker.min.js"></script>
+</head>
+
+<body style="background-color:#C7E8F3; margin: 0; padding: 0;">
+    <header>
+        <h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+        </h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="{{ url_for('teams') }}" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots (9th)</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons (10th)</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix (11th)</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamic (12th)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+                
+    <main>
+        <br><br><br>
+        <section>
+            <div class="centercalendar" style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23949bff&amp;ctz=America%2FNew_York&amp;src=cGFob2tlZXJvYm90aWNzQGdtYWlsLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%230B8043&amp;title=Pahokee%20Robotics" style="border: solid 4px #ffffff; box-shadow: 4px 4px 0px rgba(0,0,0,0.2); border-radius: 8px;" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
