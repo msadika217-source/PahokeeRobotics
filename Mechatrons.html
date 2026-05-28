@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+<title>PahokeeRobotics</title>
+<link href="/static/PahokeeRoboticsStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color:#C7E8F3;">
+		 
+		<header>
+			<h1 style="font-family: 'Jerseyletters-IP5V', sans-serif; text-align: center; font-size: 100px; margin: 0; color: #087CA7">
+  						<a href="PahokeeRoboticsIndex.html" style="text-decoration: none; color: inherit;">Pahokee Robotics</a>
+			</h1>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                
+                <li class="teams-dropdown">
+                    <a href="#" class="dropbtn">Teams <i class="fa-solid fa-chevron-down" style="font-size: 0.75em;"></i></a>
+                    <ul class="teams-dropdown-menu">
+                        <li><a href="{{ url_for('middle_school') }}">Middle School</a></li>
+                        <li class="has-subs">
+                            <a href="{{ url_for('high_school') }}">High School <i class="fa-solid fa-chevron-right" style="font-size: 0.75em; float: right; margin-top: 4px;"></i></a>
+                            <ul class="teams-sub-menu">
+                                <li><a href="{{ url_for('bender_bots') }}">BenderBots</a></li>
+                                <li><a href="{{ url_for('mechatrons') }}">Mechatrons</a></li>
+                                <li><a href="{{ url_for('rising_phoenix') }}">Rising Phoenix</a></li>
+                                <li><a href="{{ url_for('dynamics') }}">Dynamics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('outreach') }}">Outreach</a></li>
+                <li><a href="{{ url_for('sponsors') }}">Sponsors</a></li>
+                <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
+                <li><a href="{{ url_for('resources') }}">Resources</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <br><br>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <a href="{{ url_for('high_school') }}" style="text-decoration: none; color: navy; font-weight: bold; font-size: 18px;">
+                <i class="fa-solid fa-arrow-left"></i>🔺Back to High School Divisions
+            </a>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <a href="/OverviewM.html" class="retro-btn">
+        View Team Overview
+    </a>
+</div>
+
+        <section style="text-align: center; margin-top: 20px;">
+            <h2 style="font-family: 'Jerseyletters-IP5V', sans-serif; color: navy; font-size: 50px; margin: 0;">Mechatrons</h2>
+            <p style="color: #EF6461; font-weight: bold; font-size: 20px; margin: 5px 0 0 0;">10th Grade Team Roster</p>
+        </section>
+
+        <section class="member-grid">
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/19.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">“It’s only fun if your winning”.   -Lazaro Valdez. 
+I live by this quote because it reminds me that losing isn’t fun and I can enjoy life the the fullest when I’m winning."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Zackary Valdez</h4>
+                    <p class="character-role">Lead Builder and Co Captain</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/18.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"With great power comes great responsibility“ </p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Amairany Cervantes</h4>
+                    <p class="character-role">Captain and Notebook (CHANGE)</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/images/dice.jpeg" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Manha Sadika</h4>
+                    <p class="character-role">Lead Programmer and Co Captain</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/21.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Not all those who wander are lost."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Damian Aboytes</h4>
+                    <p class="character-role">Builder</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/22.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"Live in the moment and make the most of it"</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Sebastian Montalvo</h4>
+                    <p class="character-role">Builder</p>
+                </div>
+            </div>
+
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/24.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"In the midst of winter, I suddenly found there was in me an invincible summer."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Jimmerson Saint-Hubert</h4>
+                    <p class="character-role">Social Media</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/26.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Brisa Baltazar</h4>
+                    <p class="character-role">Social Media and Art</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/27.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Adiba Aysha</h4>
+                    <p class="character-role">Social Media</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/28.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"All we have to decide is what to do with the time that is given to us."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Adrian Anguiano</h4>
+                    <p class="character-role">Photographer</p>
+                </div>
+            </div>
+
+            <div class="character-card">
+                <div class="portrait-frame">
+                    <img src="/static/students(Mechatrons)/29.png" alt="Member Photo" class="portrait-img">
+                    <div class="quote-overlay">
+                        <p class="quote-text">"If it doesn't move, add more torque. If it moves too much, add zip ties."</p>
+                    </div>
+                </div>
+                <div class="character-info">
+                    <h4 class="character-name">Shaila Fonseca</h4>
+                    <p class="character-role">Social Media and Art</p>
+                </div>
+            </div>
+
+        </section>
+        <br><br>
+    </main>
+</body>
+</html>
